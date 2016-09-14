@@ -408,7 +408,6 @@ static void meson_mmc_set_ios(struct mmc_host *mmc, struct mmc_ios *ios)
 static int meson_mmc_request_done(struct mmc_host *mmc, struct mmc_request *mrq)
 {
 	struct meson_host *host = mmc_priv(mmc);
-	struct mmc_command *cmd = host->cmd;
 
 	WARN_ON(host->mrq != mrq);
 

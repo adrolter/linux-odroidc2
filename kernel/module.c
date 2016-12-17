@@ -1965,7 +1965,7 @@ static void frob_writable_data(const struct module_layout *layout,
 			       int (*set_memory)(unsigned long start, int num_pages))
 {
 	BUG_ON((unsigned long)layout->base_rw & (PAGE_SIZE-1));
-	BUG_ON((unsigned long)layout->size_rw & (PAGE_SIZE-1));
+	/*BUG_ON((unsigned long)layout->size_rw & (PAGE_SIZE-1));*/
 	set_memory((unsigned long)layout->base_rw, layout->size_rw  >> PAGE_SHIFT);
 }
 
